@@ -2,3 +2,16 @@ wanda:
   name: Wanda Jordgubben
   email: wandajord@aol.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+gerald: 
+  name: Gerald Grossmuütter
+  email: ggm@aol.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
