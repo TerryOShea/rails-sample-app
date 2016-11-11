@@ -14,6 +14,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     assert_select 'a', text: 'delete', count: 0
     User.paginate(page: 1).each do |user|
       assert_select 'a[href=?]', user_path(user), text: user.name
+      assert user.activated == true
     end
   end
   
