@@ -1,0 +1,31 @@
+zither: 
+  content: "Panama"
+  created_at: <%= 3.hours.ago %>
+  user: wanda
+
+didgeridoo: 
+  content: "A canal"
+  created_at: <%= 2.hours.ago %>
+  user: wanda
+
+balalaika: 
+  content: "A plan"
+  created_at: <%= 1.hour.ago %>
+  user: wanda
+
+most_recent: 
+  content: "A man"
+  created_at: <%= Time.zone.now %>
+  user: wanda
+  
+<% 30.times do |n| %>
+micropost_<%= n %>: 
+  content: <%= Faker::Hipster.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: wanda
+<% end %>
+
+qantas: 
+  content: "Bag beg big bog bug"
+  created_at: <%= 3.days.ago %>
+  user: gerald

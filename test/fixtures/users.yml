@@ -7,8 +7,15 @@ wanda:
   activated_at: <%= Time.zone.now %>
 
 gerald: 
-  name: Gerald Grossmuütter
+  name: Gerald Grossmütter
   email: ggm@aol.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+ophelia: 
+  name: Ophelia Oppenheimer
+  email: oop@aol.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
